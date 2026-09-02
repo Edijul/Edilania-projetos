@@ -1,1 +1,1103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Edilânia Julian Martins Gomes | Projetos, Processos e Tecnologia</title>
+
+  <meta
+    name="description"
+    content="Portfólio profissional de Edilânia Julian Martins Gomes. Projetos, processos, tecnologia, melhoria contínua, BPMN, Scrum, requisitos e soluções digitais."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --black: #161616;
+      --black-soft: #222222;
+      --gold: #b08d57;
+      --gold-light: #d2b98f;
+      --cream: #f7f4ef;
+      --white: #ffffff;
+      --gray: #6d6a66;
+      --gray-light: #e8e2d9;
+      --max-width: 1180px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--cream);
+      color: var(--black);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(90%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* NAVBAR */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(22, 22, 22, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(176, 141, 87, 0.25);
+    }
+
+    nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 1.35rem;
+      color: var(--white);
+      font-weight: 700;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      list-style: none;
+      color: #ddd;
+      font-size: 0.93rem;
+    }
+
+    .nav-links a {
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .nav-button {
+      background: var(--gold);
+      color: var(--black) !important;
+      padding: 11px 19px;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(circle at 85% 30%, rgba(176, 141, 87, 0.18), transparent 28%),
+        linear-gradient(135deg, #121212 0%, #1c1c1c 70%, #25221e 100%);
+      color: white;
+      padding-top: 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      width: 450px;
+      height: 450px;
+      border: 1px solid rgba(176, 141, 87, 0.14);
+      border-radius: 50%;
+      position: absolute;
+      right: -150px;
+      bottom: -180px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: 1.02;
+      max-width: 900px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: var(--gold-light);
+    }
+
+    .hero-description {
+      max-width: 700px;
+      color: #cbc8c3;
+      font-size: 1.15rem;
+      margin-bottom: 34px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 25px;
+      border-radius: 4px;
+      font-weight: 700;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: var(--white);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 55px;
+    }
+
+    .section-heading small {
+      color: var(--gold);
+      text-transform: uppercase;
+      font-size: 0.76rem;
+      letter-spacing: 3px;
+      font-weight: 700;
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      margin: 9px 0 15px;
+      line-height: 1.15;
+    }
+
+    .section-heading p {
+      color: var(--gray);
+      font-size: 1.05rem;
+    }
+
+    /* SOBRE */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+      color: #45423f;
+    }
+
+    .quote-card {
+      background: var(--black);
+      color: white;
+      padding: 40px;
+      border-left: 4px solid var(--gold);
+    }
+
+    .quote-card p {
+      font-family: "Playfair Display", serif;
+      font-size: 1.45rem;
+      line-height: 1.45;
+    }
+
+    .quote-card span {
+      display: block;
+      color: var(--gold-light);
+      margin-top: 20px;
+      font-size: 0.85rem;
+      font-family: "DM Sans", sans-serif;
+      letter-spacing: 1px;
+    }
+
+    /* SERVIÇOS */
+
+    .services {
+      background: #eee9e2;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 35px 30px;
+      border: 1px solid transparent;
+      transition: 0.3s;
+      min-height: 250px;
+    }
+
+    .card:hover {
+      border-color: var(--gold);
+      transform: translateY(-6px);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.07);
+    }
+
+    .card-number {
+      color: var(--gold);
+      font-family: "Playfair Display", serif;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.45rem;
+      margin-bottom: 14px;
+    }
+
+    .card p {
+      color: var(--gray);
+      font-size: 0.95rem;
+    }
+
+    /* CASES */
+
+    .case {
+      display: grid;
+      grid-template-columns: 0.4fr 1.6fr;
+      padding: 40px 0;
+      border-top: 1px solid var(--gray-light);
+      gap: 30px;
+    }
+
+    .case:last-child {
+      border-bottom: 1px solid var(--gray-light);
+    }
+
+    .case-number {
+      color: var(--gold);
+      font-family: "Playfair Display", serif;
+      font-size: 3rem;
+    }
+
+    .case-content h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.65rem;
+      margin-bottom: 15px;
+    }
+
+    .case-content p {
+      color: var(--gray);
+      max-width: 780px;
+      margin-bottom: 15px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      border: 1px solid #d6c7b2;
+      color: #765d3b;
+      padding: 5px 10px;
+      font-size: 0.76rem;
+      border-radius: 50px;
+    }
+
+    /* PROCESSO */
+
+    .process {
+      background: var(--black);
+      color: white;
+    }
+
+    .process .section-heading p {
+      color: #aaa;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1px;
+      background: rgba(176, 141, 87, 0.25);
+    }
+
+    .step {
+      background: #1d1d1d;
+      padding: 30px 22px;
+    }
+
+    .step strong {
+      color: var(--gold-light);
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .step h3 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .step p {
+      font-size: 0.87rem;
+      color: #aaa;
+    }
+
+    /* SKILLS */
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill {
+      background: white;
+      padding: 12px 18px;
+      border: 1px solid var(--gray-light);
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+
+    .skill:hover {
+      border-color: var(--gold);
+      color: #806438;
+    }
+
+    /* CTA */
+
+    .cta {
+      background: var(--gold);
+      padding: 80px 0;
+    }
+
+    .cta-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .cta h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      max-width: 690px;
+      line-height: 1.15;
+    }
+
+    .cta .btn {
+      background: var(--black);
+      color: white;
+      flex-shrink: 0;
+    }
+
+    /* CONTATO */
+
+    .contact {
+      background: var(--cream);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+    }
+
+    .contact-box {
+      background: white;
+      padding: 32px;
+      border-left: 3px solid var(--gold);
+    }
+
+    .contact-box h3 {
+      font-family: "Playfair Display", serif;
+      margin-bottom: 12px;
+    }
+
+    .contact-box p {
+      color: var(--gray);
+      margin-bottom: 8px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #111;
+      color: #aaa;
+      padding: 35px 0;
+      font-size: 0.85rem;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    /* RESPONSIVIDADE */
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cta-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .cards,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .case {
+        grid-template-columns: 1fr;
+      }
+
+      .case-number {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .hero {
+        min-height: 92vh;
+      }
+
+      .hero h1 {
+        font-size: 3.1rem;
+      }
+
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#inicio" class="logo">
+          Edilânia<span>.</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Atuação</a></li>
+          <li><a href="#cases">Cases</a></li>
+          <li><a href="#processo">Método</a></li>
+          <li><a href="#contato" class="nav-button">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <main>
+
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            Projetos • Processos • Tecnologia
+          </div>
+
+          <h1>
+            Transformando necessidades em
+            <span>projetos estruturados.</span>
+          </h1>
+
+          <p class="hero-description">
+            Atuação conectando tecnologia, processos e negócio para
+            organizar demandas, estruturar requisitos, melhorar fluxos
+            e apoiar a entrega de soluções com mais clareza e eficiência.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#cases" class="btn btn-primary">
+              Conhecer meus projetos
+            </a>
+
+            <a href="portfolio.pdf" target="_blank" class="btn btn-outline">
+              Ver portfólio em PDF
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SOBRE -->
+
+    <section id="sobre">
+      <div class="container">
+
+        <div class="section-heading">
+          <small>Sobre mim</small>
+          <h2>Negócio, tecnologia e organização trabalhando juntos.</h2>
+        </div>
+
+        <div class="about-grid">
+
+          <div class="about-text">
+            <p>
+              Sou Edilânia Julian Martins Gomes, profissional com experiência
+              em ambientes de tecnologia, processos e operações, direcionando
+              minha atuação para a área de Projetos.
+            </p>
+
+            <p>
+              Minha experiência envolve levantamento de requisitos,
+              acompanhamento e priorização de demandas, interface com
+              fornecedores, suporte a sistemas, documentação de processos,
+              BPMN, elaboração de POPs e aplicação prática de metodologias ágeis.
+            </p>
+
+            <p>
+              Meu objetivo é transformar problemas e necessidades de negócio
+              em estruturas mais claras, processos organizados e entregas
+              acompanháveis.
+            </p>
+          </div>
+
+          <div class="quote-card">
+            <p>
+              “Projetos não são apenas cronogramas. São pessoas,
+              decisões, processos e entregas.”
+            </p>
+
+            <span>
+              MINHA VISÃO DE PROJETOS
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SERVIÇOS -->
+
+    <section class="services" id="servicos">
+      <div class="container">
+
+        <div class="section-heading">
+          <small>Como posso contribuir</small>
+          <h2>Da necessidade à estruturação da solução.</h2>
+          <p>
+            Competências que podem apoiar empresas na organização,
+            documentação e evolução de projetos e processos.
+          </p>
+        </div>
+
+        <div class="cards">
+
+          <div class="card">
+            <div class="card-number">01</div>
+            <h3>Gestão de Projetos</h3>
+            <p>
+              Estruturação de demandas, definição de prioridades,
+              acompanhamento de atividades, riscos, stakeholders
+              e entregas.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">02</div>
+            <h3>Mapeamento de Processos</h3>
+            <p>
+              Análise de processos atuais, modelagem BPMN,
+              identificação de oportunidades e organização de fluxos.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">03</div>
+            <h3>Requisitos</h3>
+            <p>
+              Levantamento e estruturação de necessidades,
+              requisitos funcionais, critérios de aceite
+              e regras de negócio.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">04</div>
+            <h3>Documentação</h3>
+            <p>
+              Criação de POPs, documentação de processos,
+              especificações e materiais para transferência
+              de conhecimento.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">05</div>
+            <h3>Metodologias Ágeis</h3>
+            <p>
+              Apoio à organização de backlog, prioridades,
+              Daily Scrum, acompanhamento visual do trabalho
+              e melhoria contínua.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">06</div>
+            <h3>Fornecedores de TI</h3>
+            <p>
+              Interface com fornecedores, acompanhamento de
+              contratos e demandas, alinhamentos e organização
+              de responsabilidades.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CASES -->
+
+    <section id="cases">
+      <div class="container">
+
+        <div class="section-heading">
+          <small>Experiência aplicada</small>
+          <h2>Cases selecionados.</h2>
+          <p>
+            Experiências apresentadas de forma anonimizada, preservando
+            informações confidenciais das organizações envolvidas.
+          </p>
+        </div>
+
+
+        <article class="case">
+
+          <div class="case-number">01</div>
+
+          <div class="case-content">
+            <h3>Gestão e priorização de demandas de TI</h3>
+
+            <p>
+              Organização e acompanhamento de demandas envolvendo
+              usuários internos, equipe de tecnologia e fornecedores,
+              com apoio à definição de prioridades e acompanhamento
+              das solicitações até sua resolução.
+            </p>
+
+            <div class="tags">
+              <span class="tag">Gestão de demandas</span>
+              <span class="tag">Jira</span>
+              <span class="tag">Stakeholders</span>
+              <span class="tag">TI</span>
+            </div>
+          </div>
+
+        </article>
+
+
+        <article class="case">
+
+          <div class="case-number">02</div>
+
+          <div class="case-content">
+            <h3>Mapeamento e melhoria de processos</h3>
+
+            <p>
+              Levantamento de processos internos, construção de fluxos
+              BPMN, identificação de pontos de melhoria e criação de
+              documentação para padronização e transferência de conhecimento.
+            </p>
+
+            <div class="tags">
+              <span class="tag">BPMN</span>
+              <span class="tag">Processos</span>
+              <span class="tag">POP</span>
+              <span class="tag">Melhoria contínua</span>
+            </div>
+          </div>
+
+        </article>
+
+
+        <article class="case">
+
+          <div class="case-number">03</div>
+
+          <div class="case-content">
+            <h3>Scrum aplicado à organização do trabalho</h3>
+
+            <p>
+              Utilização prática de princípios ágeis para acompanhamento
+              das atividades, organização de prioridades, realização de
+              alinhamentos e aumento da visibilidade do trabalho em andamento.
+            </p>
+
+            <div class="tags">
+              <span class="tag">Scrum</span>
+              <span class="tag">Daily</span>
+              <span class="tag">Backlog</span>
+              <span class="tag">Agilidade</span>
+            </div>
+          </div>
+
+        </article>
+
+
+        <article class="case">
+
+          <div class="case-number">04</div>
+
+          <div class="case-content">
+            <h3>Gestão de fornecedores e serviços de TI</h3>
+
+            <p>
+              Apoio à avaliação e acompanhamento de fornecedores,
+              contratos, solicitações técnicas e comunicação entre
+              empresas parceiras e áreas internas.
+            </p>
+
+            <div class="tags">
+              <span class="tag">Fornecedores</span>
+              <span class="tag">Contratos</span>
+              <span class="tag">Negociação</span>
+              <span class="tag">Gestão</span>
+            </div>
+          </div>
+
+        </article>
+
+
+        <article class="case">
+
+          <div class="case-number">05</div>
+
+          <div class="case-content">
+            <h3>Projeto digital de jornada de reservas</h3>
+
+            <p>
+              Estruturação de requisitos e jornada digital conectando
+              aquisição de clientes, landing page, reserva, pagamento
+              e confirmação.
+            </p>
+
+            <div class="tags">
+              <span class="tag">PRD</span>
+              <span class="tag">Requisitos</span>
+              <span class="tag">UX</span>
+              <span class="tag">Projeto digital</span>
+            </div>
+          </div>
+
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- PROCESSO -->
+
+    <section class="process" id="processo">
+      <div class="container">
+
+        <div class="section-heading">
+          <small>Meu método</small>
+          <h2>Como eu penso um projeto.</h2>
+
+          <p>
+            Uma abordagem baseada em entendimento, estruturação,
+            acompanhamento e melhoria.
+          </p>
+        </div>
+
+        <div class="steps">
+
+          <div class="step">
+            <strong>01</strong>
+            <h3>Entender</h3>
+            <p>
+              Objetivo, problema, contexto, stakeholders
+              e resultado esperado.
+            </p>
+          </div>
+
+          <div class="step">
+            <strong>02</strong>
+            <h3>Estruturar</h3>
+            <p>
+              Escopo, requisitos, responsabilidades,
+              riscos e prioridades.
+            </p>
+          </div>
+
+          <div class="step">
+            <strong>03</strong>
+            <h3>Acompanhar</h3>
+            <p>
+              Atividades, prazos, fornecedores,
+              decisões e impedimentos.
+            </p>
+          </div>
+
+          <div class="step">
+            <strong>04</strong>
+            <h3>Dar visibilidade</h3>
+            <p>
+              Status, indicadores, pendências
+              e próximos passos.
+            </p>
+          </div>
+
+          <div class="step">
+            <strong>05</strong>
+            <h3>Melhorar</h3>
+            <p>
+              Documentação, aprendizados
+              e evolução contínua.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- COMPETÊNCIAS -->
+
+    <section>
+      <div class="container">
+
+        <div class="section-heading">
+          <small>Competências</small>
+          <h2>Ferramentas e conhecimentos.</h2>
+        </div>
+
+        <div class="skills-grid">
+          <span class="skill">Gestão de Projetos</span>
+          <span class="skill">Scrum</span>
+          <span class="skill">BPMN</span>
+          <span class="skill">Jira</span>
+          <span class="skill">Notion</span>
+          <span class="skill">SQL Server</span>
+          <span class="skill">Levantamento de Requisitos</span>
+          <span class="skill">Gestão de Demandas</span>
+          <span class="skill">Stakeholders</span>
+          <span class="skill">POPs</span>
+          <span class="skill">PDTI</span>
+          <span class="skill">Fornecedores</span>
+          <span class="skill">Processos</span>
+          <span class="skill">Melhoria Contínua</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+      <div class="container">
+
+        <div class="cta-content">
+
+          <h2>
+            Tem um processo, projeto ou problema que precisa ganhar estrutura?
+          </h2>
+
+          <a href="#contato" class="btn">
+            Vamos conversar
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTATO -->
+
+    <section class="contact" id="contato">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <small>Contato</small>
+          <h2>Vamos construir algo melhor.</h2>
+
+          <p>
+            Disponível para oportunidades profissionais,
+            projetos e parcerias.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-box">
+            <h3>Contato profissional</h3>
+
+            <p>
+              <strong>E-mail:</strong>
+              seuemail@email.com
+            </p>
+
+            <p>
+              <strong>WhatsApp:</strong>
+              (00) 00000-0000
+            </p>
+
+            <p>
+              <strong>Localização:</strong>
+              Minas Gerais • Brasil
+            </p>
+          </div>
+
+
+          <div class="contact-box">
+            <h3>Redes profissionais</h3>
+
+            <p>
+              <strong>LinkedIn:</strong>
+              linkedin.com/in/seuusuario
+            </p>
+
+            <p>
+              <strong>GitHub:</strong>
+              github.com/seuusuario
+            </p>
+
+            <p>
+              <strong>Portfólio PDF:</strong>
+              <a href="portfolio.pdf" target="_blank">
+                visualizar portfólio
+              </a>
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="container footer-content">
+
+      <p>
+        © 2026 Edilânia Julian Martins Gomes.
+      </p>
+
+      <p>
+        Projetos • Processos • Tecnologia
+      </p>
+
+    </div>
+  </footer>
+
+
+</body>
+</html>
