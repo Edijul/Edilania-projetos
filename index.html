@@ -489,6 +489,43 @@
       color: var(--gray);
       margin-bottom: 8px;
     }
+    .email-contact {
+  margin-top: 15px;
+}
+
+.email-contact p a {
+  color: var(--gold);
+  overflow-wrap: anywhere;
+}
+
+.email-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  padding: 12px 22px;
+
+  background: var(--black);
+  color: white;
+
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.email-button:hover {
+  background: var(--gold);
+  color: var(--black);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .email-button {
+    width: 100%;
+  }
+}
 
     /* FOOTER */
 
@@ -1035,12 +1072,21 @@
           <div class="contact-box">
             <h3>Contato profissional</h3>
             
-           <p>
-              <strong>E-mail:</strong>
-             <a href="mailto:edilaniajuliajf@gmail.com?subject=Contato%20pelo%20Portfólio&body=Olá%2C%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.">
-                  edilaniajuliajf@email.com
-              </a>
-            </p>
+           <div class="email-contact">
+  <p>
+    <strong>E-mail:</strong>
+    <a href="mailto:edilaniajuliajf@gmail.com?subject=Contato%20pelo%20Portfólio&body=Olá%2C%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.">
+      edilaniajuliajf@gmail.com
+    </a>
+  </p>
+
+  <a
+    href="mailto:edilaniajuliajf@gmail.com?subject=Contato%20pelo%20Portfólio&body=Olá%2C%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto."
+    class="email-button"
+  >
+    ✉ Enviar e-mail
+  </a>
+</div>
             <p>
              <strong>WhatsApp:</strong>
                <a
